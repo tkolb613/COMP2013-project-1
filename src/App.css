@@ -7,18 +7,18 @@
   text-align: center;
 }
 
+img {
+  border-radius: 5px;
+}
+
 .NavBar {
   background-color: rgb(76, 43, 226);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 8px;
-  height: 100%;
-}
-
-.NavDiv {
-  width: 33%;
+  color: white;
 }
 
 .NavTitle {
@@ -27,127 +27,128 @@
   align-items: center;
 }
 
-.NavCart {
-  text-align: right;
-  padding: 0 10px;
-}
-
+.NavCart,
 .NavUser {
-  text-align: left;
   padding: 0 10px;
 }
 
-.GroceriesApp-Container {
-  width: 100%;
+.Main {
   display: flex;
-  justify-content: space-between;
-
-  /* max-width: 800px; */
-  /* border: 1px solid white; */
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.CartContainer {
-  width: 25%;
-  justify-content: center;
-
-  /* position: sticky; */
-  /* top: 0; Adjust this value as needed */
-  /* max-height: 100vh; Ensure it doesn't exceed the viewport height */
-  /* overflow-y: auto; Add scroll if content exceeds the container height */
-
-  /* border: 1px solid white; */
-}
-
-.CartCard {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  border: 2px wheat solid;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-  background-color: rgb(43, 48, 54);
-}
-
-.CartCardInfo {
-  /* display: flex;
-  justify-content: space-around; */
-  width: 50%;
+.Products {
+  flex: 3;
 }
 
 .ProductsContainer {
-  width: 75%;
-  max-width: 800px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* border: 1px solid white; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
 
 .ProductCard {
-  width: 20%;
   border: 2px wheat solid;
   border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-}
-
-.ProductQuantityDiv {
+  padding: 15px;
+  text-align: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
-.QuantityBtn {
+.ProductQuantityDiv,
+.QuantityCounter {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+.QuantityBtn,
+.counter-button {
   width: 25px;
   height: 25px;
   border: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 5px;
 }
+
 .QuantityBtn:hover {
   background-color: rgb(76, 43, 226);
 }
 
-img {
+.ShoppingCart {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  border: 2px wheat solid;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  background-color: rgb(43, 48, 54);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.CartContainer {
+  width: 100%;
+}
+
+.CartCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px wheat solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgb(60, 65, 75);
+  width: 100%;
+  max-width: 280px;
+  gap: 10px;
+}
+
+.CartCard img {
   height: 50px;
-  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.counter-container {
-  /* border: 1px solid white; */
+.CartButtons {
   display: flex;
-  width: 70%;
-  height: 20px;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px auto;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.counter-button {
-  width: 15px;
-  height: 15px;
-  border: 1px solid white;
-  border-radius: 50%;
+.CartButtons button {
+  flex: 1;
+  padding: 5px 10px;
   cursor: pointer;
-}
-
-.CartListBtns {
-  display: flex;
-  justify-content: space-around;
 }
 
 .RemoveButton {
   background-color: rgb(190, 0, 0);
+  color: white;
 }
 
 #BuyButton {
   background-color: green;
+  color: white;
   width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+  gap: 5px;
 }
